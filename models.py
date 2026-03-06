@@ -16,7 +16,7 @@ class Node():
         self.right_model = right_model
         self.final = final
 
-class DecisionTreeME():
+class TrIME():
     def __init__(self, min_samples=2, max_depth=2,n_thresholds=10):
         self.min_samples = min_samples
         self.max_depth = max_depth
@@ -224,4 +224,5 @@ class DecisionTreeME():
             self.retrain_leaf_nodes(left_data, node.left, param_grid, cv)
         if node.right is not None:
             self.retrain_leaf_nodes(right_data, node.right, param_grid, cv)
+
 
